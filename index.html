@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Rock Paper Scissors </title>
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<script type = "text/javascript">
+//<![CDATA[
+function rungame(){
+var num = Math.floor(Math.random() * 3) + 1;
+var rock = document.getElementById("rock").checked;
+var paper = document.getElementById("paper").checked;
+var scissors = document.getElementById("scissors").checked;
+var output = document.getElementById("output");
+// Rock Section
+if ( rock == true && num == 1 )
+{
+output.innerHTML = "You Tied!";
+}
+if ( rock == true && num == 2 )
+{
+output.innerHTML = "You Lose!";
+}
+if ( rock == true && num == 3 )
+{
+output.innerHTML = "You Win!";
+}
+// Paper Section
+if ( paper  == true && num == 1 )
+{
+output.innerHTML = "You Win!";
+}
+if ( paper  == true && num == 2 )
+{
+output.innerHTML = "You Tied!";
+}
+if ( paper == true && num == 3 )
+{
+output.innerHTML = "You Lose!";
+}
+// Scissor Section
+if ( scissors == true && num == 1 )
+{
+output.innerHTML = "You Lose!";
+}
+if ( scissors == true && num == 2 )
+{
+output.innerHTML = "You Win!";
+}
+if ( scissors == true && num == 3 )
+{
+output.innerHTML = "You Tied!";
+}
+
+}
+
+
+
+//]]>
+</script>
+</head>
+
+<body>
+
+<h1> Rock Paper Scissors </h1>
+
+       <p>
+          <label>You Choose</label>            
+          <input type = "radio"
+                 name = "game"
+                 id = "rock"
+                 value = "rock"
+                 checked = "checked" />
+          <label for = "rock">Rock</label>
+          
+          <input type = "radio"
+                 name = "game"
+                 id = "paper"
+                 value = "paper" />
+          <label for = "paper">Paper</label>
+ 
+          <input type = "radio"
+                 name = "game"
+                 id = "scissors"
+                 value = "scissors" />
+          <label for = "scissors">Scissors</label>
+        </p>
+	<p>
+	<button type = "button"
+		onclick = "rungame()">
+	Submit
+	</button>
+	</p>
+<div id = "output"> </div>
+</body>
+</html>
